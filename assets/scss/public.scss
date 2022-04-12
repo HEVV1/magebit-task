@@ -15,9 +15,11 @@
 @import "base/animations";
 @import "base/utilities";
 // Components
-//..........//
+@import "components/input";
+@import "components/input_checkbox";
 // Blocks
-//..........//
+@import "blocks/main_content";
+@import "blocks/link_icons";
 // Layouts
 @import "layouts/header";
 @import "layouts/form";

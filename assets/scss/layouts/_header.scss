@@ -1,0 +1,96 @@
+.layout-header {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  .wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    .header-wrapper-logo {
+      &:visited,
+      &:link {
+        display: inline-flex;
+        align-items: center;
+      }
+      .header-logo {
+        .logo {
+          width: 2.5rem;
+          margin-right: 1.5rem;
+        }
+      }
+      .header-logo-text {
+        .logo-text {
+          font-weight: bold;
+          text-transform: lowercase;
+        }
+      }
+    }
+    .header-wrapper-links {
+      display: flex;
+      align-items: center;
+      nav {
+        ul {
+          display: flex;
+          li {
+            position: relative;
+            &:not(:last-child) {
+              margin-right: 3rem;
+            }
+            a {
+              &:visited,
+              &:link {
+                color: $color_grey;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  width: 100%;
+                  height: 0.3rem;
+                  background-color: $color_primary;
+                  transform-origin: center;
+                  transform: scaleX(0);
+                  transition: all $default_transition_time;
+                }
+                &:hover {
+                  &::before {
+                    transform: scaleX(1);
+                  }
+                }
+              }
+              &:focus {
+                &::before {
+                  transform: scaleX(1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Responsivness*/
+@include res("lg") {
+  .layout-header {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background-color: $color_white;
+    .header-wrapper-logo {
+      .header-logo-text {
+        display: none;
+      }
+    }
+    .wrapper-header {
+      .header-wrapper-links {
+        nav {
+          ul {
+            li {
+              &:not(:last-child) {
+                margin-right: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

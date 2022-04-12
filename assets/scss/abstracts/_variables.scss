@@ -1,16 +1,26 @@
 /* Colors -----------------------------------------------------------------*/
 $color_white:                 #FFFFFF; // White
+$color_dark_white:            #F2F5FA; // Dark White
 $color_black:                 #000000; // Black
-$color_primary:               #a09595; //Primary color
+$color_primary:               #4066A5; //Primary color
+$color_grey:                  #6A707B; //Color grey
+$color_dark_blue:             #2F4A80; //Color Darker Blue
+$color_violet:                #C13584; //Color Violet
+$color_dark_violet:           #8F2762; //Color Darker Violet
+$color_blue:                  #177FBF; //Color Blue
+$color_light_blue:            #1DA1F2; //Color Light blue
+$color_red:                   #FF0000; //Color Red
+$color_dark_red:              #CC0000; //Color Darker Red
 /* Fonts ------------------------------------------------------------------*/
 $font_awesome_5_pro: 'Font Awesome 5 Pro';
-$font_family_lato: 'Lato', sans-serif;
-$default_font_family: $font_family_lato;
+$font_family_arial: Arial, Helvetica, sans-serif;
+$font_family_georgia: Georgia, 'Times New Roman', Times, serif;
+$default_font_family: $font_family_arial;
 $default_font_size: 1.6rem;
 $default_font_weight: 400;
-$default_line_height: 1.7;
+$default_line_height: 2.8rem;
 $default_font_color: $color_black;
 /* Other ------------------------------------------------------------------*/
-$regular_content_width: 114rem + 5.4rem; // content + outside gutter (left and right together)
+$regular_content_width: 50rem + 5.4rem; // content + outside gutter (left and right together)
 $image_directory: '../../images/';
-$default_transition_time: .3s;
+$default_transition_time: .2s;

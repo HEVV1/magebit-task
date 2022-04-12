@@ -1,0 +1,53 @@
+.block-input-checkbox {
+  display: flex;
+  align-items: center;
+  .form-check {
+    display: flex;
+    input {
+      &[type="checkbox"],
+      &[type="radio"] {
+        appearance: none;
+      }
+      & + .form-check-label {
+        display: inline-flex;
+        align-items: center;
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 2.6rem;
+          height: 2.6rem;
+          cursor: pointer;
+
+          border-radius: 0.2rem;
+          border: 0.1rem solid rgba($color: $color_grey, $alpha: 0.4);
+        }
+      }
+      &:checked {
+        & + .form-check-label {
+          &::before {
+            background-image: url(../../images/icons/ic_checkmark.svg);
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: center;
+            background-color: $color_primary;
+          }
+        }
+      }
+    }
+    &.invalid {
+      .form-check-label {
+        &::before{
+          border: 1px solid #ff0000 !important;
+        }
+      }
+     
+    }
+  }
+  .form-check-text {
+    margin-left: 1.5rem;
+    color: $color_grey;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

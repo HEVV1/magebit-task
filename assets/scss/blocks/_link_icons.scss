@@ -1,0 +1,87 @@
+.block-link-icons {
+  nav {
+    ul {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        &:link,
+        &:visited {
+          &:not(:last-child) {
+            margin-right: 2rem;
+          }
+          li {
+            height: 4.6rem;
+            width: 4.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.1rem solid rgba($color: $color_grey, $alpha: 0.3);
+            border-radius: 100%;
+            transition: ease-in-out $default_transition_time;
+            i {
+              transition: ease-in-out $default_transition_time;
+              color: $color_grey;
+            }
+            &:hover {
+              box-shadow: 0rem 1rem 3rem rgba($color: $color_black, $alpha: 0.3);
+              i {
+                color: $color_white;
+              }
+              &.blue {
+                background-color: $color_primary;
+              }
+              &.violet {
+                background-color: $color_violet;
+              }
+              &.light-blue {
+                background-color: $color_light_blue;
+              }
+              &.red {
+                background-color: $color_red;
+              }
+            }
+          }
+          &:focus {
+            li {
+              box-shadow: 0rem 1rem 3rem rgba($color: $color_black, $alpha: 0.3);
+              i {
+                color: $color_white;
+              }
+              &.blue {
+                background-color: $color_dark_blue;
+              }
+              &.violet {
+                background-color: $color_dark_violet;
+              }
+              &.light-blue {
+                background-color: $color_blue;
+              }
+              &.red {
+                background-color: $color_dark_red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include res("lg") {
+  .block-link-icons {
+    nav {
+      ul {
+        a {
+          &:link,
+          &:visited {
+            &:not(:last-child) {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

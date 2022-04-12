@@ -1,13 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pineapple</title>
-  <link rel="stylesheet" href="./dist/css/public.css">
+  <link rel="stylesheet" href="./assets/dist/css/public.css">
 </head>
-<body>
 
+<body>
+  <div class="wrapper-page">
+    <div class="wrapper-page-header-and-content">
+      <header class="layout-header">
+        <div class="container">
+          <div class="wrapper-header">
+            <a class="header-wrapper-logo" href="#">
+              <div class="header-logo">
+                <img class="logo" src="./assets/images/logo_pineapple.svg" alt="">
+              </div>
+              <div class="header-logo-text">
+                <span class="logo-text">
+                  pineapple
+                </span>
+              </div>
+            </a>
+            <div class="header-wrapper-links">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">How it works</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="wrapper-page-content">
+        <main class="block-main-content">
+          <div class="main-content-wrapper">
+            <div class="main-content-wrapper-text custom-container">
+              <h1 class="styled-as-h1">Subscribe to newsletter</h1>
+              <span class="main-content-sub-header">Subscribe to our newsletter and get 10% discount on pineapple
+                glasses.</span>
+            </div>
+            <form id="" action="" method="" class="layout-form" js-validate>
+              <div class="block-input">
+                <div class="form-group">
+                  <input placeholder="Type your email address here…" type="text" id="email" class="form-control"
+                    name="email" js-frontend-validation-type="email">
+                  <label for="email"></label>
+                </div>
+                <button type="submit" class="input-submit">
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+              </div>
+              <div class="form-wrapper-checkbox">
+                <div class="block-input-checkbox custom-container">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="confirm" value="value_confirm" id="id_confirm"
+                      js-frontend-validation-type="non_empty_string">
+                    <label class="form-check-label" for="id_confirm"></label>
+                  </div>
+                  <span class="form-check-text">I agree to <a href="#">terms of service</a></span>
+                </div>
+              </div>
+            </form>
+            <div class="main-content-wrapper-line custom-container">
+              <hr>
+            </div>
+            <div class="block-link-icons">
+              <nav>
+                <ul>
+                  <a href="#">
+                    <li class="blue">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li class="violet">
+                      <i class="fa-brands fa-instagram"></i>
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li class="light-blue">
+                      <i class="fa-brands fa-twitter"></i>
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li class="red">
+                      <i class="fa-brands fa-youtube"></i>
+                    </li>
+                  </a>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="page-right-side" style="background-image: url(./assets/images/img_summer.jpg);"></div>
+  </div>
+  <script>
+    window['globalFormErrorList'] = {
+      'non_empty_string': 'Please agree with tearms of service',
+      'email': 'e-mail is incorrect'
+    };
+  </script>
+  <script src="https://kit.fontawesome.com/4ccde57849.js" crossorigin="anonymous"></script>
+  <script src="./assets/fake_node_modules/jquery/jquery.min.js"></script>
+  <script src="./assets/js/helpers/input_validation.js"></script>
+  <script src="./assets/js/helpers/form_validation.js"></script>
+  <script src="./assets/js/helpers/scroll_utils.js"></script>
 </body>
+
 </html>

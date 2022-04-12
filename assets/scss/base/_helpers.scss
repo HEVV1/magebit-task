@@ -17,6 +17,14 @@ input, button {
 }
 a, button {
 	outline: none !important;
+  color: $color_black;
+  transition: ease-in-out $default_transition_time;
+  &:hover{
+    color: $color_primary;
+  }
+  &:focus{
+    color: $color_dark_blue;
+  }
 }
 @include placeholder {
 	color: rgba($color_black, 0.3);
@@ -47,8 +55,8 @@ select, button {
 	cursor: pointer;
 }
 hr {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	border-color: rgba($color_white, 0.3);
 }
 /* Hides number input arrows: Chrome, Safari, Edge, Opera */
